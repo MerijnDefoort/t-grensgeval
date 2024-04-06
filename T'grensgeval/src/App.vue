@@ -1,14 +1,15 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import CkNavbar from '@/components/CkNavbar.vue'
+import CkFooter from '@/components/CkFooter.vue'
 </script>
 
 <template>
-  <div class="bg-bg-100"><ck-navbar /> <RouterView /></div>
+  <div><ck-navbar /> <RouterView /> <ck-footer /></div>
 </template>
 
 <style scoped>
 * {
-  width: 100vw;
+  font-family: 'Inter', sans-serif;
 }
 </style>

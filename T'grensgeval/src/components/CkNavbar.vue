@@ -2,7 +2,7 @@
   <div class="border-b-8 flex justify-center bg-bg-100 border-primary-100">
     <!-- Your component's HTML template goes here -->
     <ul
-      class="flex max-lg:w-1/4 max-lg:gap-8 gap-24 flex-row justify-center items-center text-center p-6 text-xl max-lg:text-sm font-extralight"
+      class="flex max-lg:w-1/4 max-lg:gap-8 gap-24 flex-row justify-center items-center text-center p-6 text-xl max-lg:text-sm font-light"
     >
       <li class="max-md:w-auto w-[140px]">
         <router-link to="/" class="hover:opacity-75 w-4">HOME</router-link>

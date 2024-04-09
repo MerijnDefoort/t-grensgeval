@@ -1,5 +1,10 @@
 <script>
-export default {}
+import CkMap from '@/components/CkMap.vue'
+export default {
+  components: {
+    CkMap
+  }
+}
 </script>
 
 <template>
@@ -9,7 +14,7 @@ export default {}
     >
       <img src="@/assets/icons/Favicon.png" class="w-1/2 max-xl:w-2/3 mix-blend-darken" alt="" />
       <div
-        class="z-10 border-l-solid absolute max-lg:h-14 h-20 w-1.5 border-l-[1px] max-lg:-bottom-7 -bottom-10"
+        class="z-10 border-gray-400 border-l-solid absolute max-lg:h-14 h-20 w-1.5 border-l-[1px] max-lg:-bottom-7 -bottom-10"
       ></div>
     </div>
     <div class="relative w-100 bg-bg-100 h-[1638px]">
@@ -42,7 +47,7 @@ export default {}
         ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de
         toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek.
       </p>
-      <div class="flex mt-48 flex-col relative justify-center items-center">
+      <div class="flex mt-48 mb-12 flex-col relative justify-center items-center">
         <button
           class="rounded-3xl absolute border-solid border-black border-2 hover:border-2 hover:bg-primary-100 hover:border-primary-100 hover:text-bg-100 bg-bg-200 w-1/6 text-2xl font-semibold py-2 px-4"
           onclick="window.location.href = '/Contact'"
@@ -51,6 +56,10 @@ export default {}
         </button>
         <div class="border-b-2 border-black w-2/3"></div>
       </div>
+    </div>
+    <div class="p-12 bg-bg-100 flex flex-col justify-center items-center text-center">
+      <h1 class="text-7xl font-light mb-16">ONZE LIGGING</h1>
+      <ck-map class="h-1/2 w-1/2" />
     </div>
   </div>
 </template>

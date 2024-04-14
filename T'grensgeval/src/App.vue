@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import CkNavbar from '@/components/CkNavbar.vue'
 import CkFooter from '@/components/CkFooter.vue'
+
 </script>
 
 <template>

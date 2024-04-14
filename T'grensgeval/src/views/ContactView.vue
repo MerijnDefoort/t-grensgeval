@@ -1,18 +1,56 @@
 <template>
   <div>
+    <ck-header />
+    <div
+      class="z-10 pt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center bg-bg-100"
+    >
+      <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
+      <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-32">
+        We kijken er naar uit om jullie te mogen verwelkomen! <br /><br />
+        <b>LOUIS & JUSTIEN</b>
+      </p>
+    </div>
+    <div class="bg-bg-200 p-12 flex flex-col justify-center items-center">
+      <h1 class="text-7xl text-center max-lg:text-3xl font-light max-lg:mb-8 mb-16">
+        CONTACT GEGEVENS
+      </h1>
+      <div class="flex justify-evenly items-center">
+        <div class="flex flex-col w-auto">
+          <h2 class="text-4xl w-auto">EMAIL</h2>
+          <p @click="sendMail" class="text-2xl w-auto hover:cursor-pointer underline">
+            {{ email }}
+          </p>
+        </div>
+        <div class="flex w-auto flex-col">
+          <h2 class="text-4xl w-auto">TELEFOON</h2>
+          <p class="text-2xl w-auto">+32 499/74 98 09</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-12 bg-bg-100"></div>
+
     <!-- Your HTML template code here -->
   </div>
 </template>
 
 <script>
+import CkHeader from '@/components/CkHeader.vue'
+
 export default {
+  components: {
+    CkHeader
+  },
   data() {
     return {
+      email: ' tgrensgeval@hotmail.com'
       // Your data properties here
     }
   },
   methods: {
     // Your methods here
+    sendMail() {
+      window.location.href = `mailto:${this.email}`
+    }
   },
   mounted() {
     // Code to run when the component is mounted

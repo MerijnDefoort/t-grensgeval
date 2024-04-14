@@ -1,7 +1,7 @@
 <template>
   <GoogleMap
     :api-key="apiKey"
-    style="width: 50%; height: 500px"
+    :style="({ width: mapWidth }, { height: mapHeight })"
     :center="center"
     :zoom="15"
     :options="mapOptions"
@@ -32,8 +32,19 @@ export default {
     MapMarker,
     InfoWindow
   },
+  props: {
+    height: {
+      type: String
+    },
+    width: {
+      type: String
+    }
+  },
+
   data() {
     return {
+      mapHeight: this.height,
+
       center: { lat: 50.810026, lng: 2.75154 },
       apiKey: import.meta.env.VITE_GOOGLEMAPS_ACCESS_TOKEN,
       mapOptions: {

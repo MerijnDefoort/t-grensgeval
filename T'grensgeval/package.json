@@ -1,6 +1,6 @@
 {
   "name": "tgrensgeval",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -28,6 +28,7 @@
     "@vue/test-utils": "^2.4.5",
     "autoprefixer": "^10.4.19",
     "cypress": "^13.7.0",
+    "daisyui": "^4.10.1",
     "eslint": "^8.49.0",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-vue": "^9.17.0",

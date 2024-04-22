@@ -1,12 +1,3 @@
-import './assets/main.css'
-import './import.js'
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
-import App from './App.vue'
-import router from './router'
-
 import bathtub from '@/assets/icons/Bathtub.svg'
 import bed from '@/assets/icons/King_bed.svg'
 import cookingpot from '@/assets/icons/Cooking_pot.svg'
@@ -26,13 +17,3 @@ const icons = {
 }
 
 export default icons
-
-// import VueCarousel from 'vue-carousel'
-
-const app = createApp(App)
-
-app.use(createPinia())
-// app.use(VueCarousel)
-app.use(router)
-
-app.mount('#app')

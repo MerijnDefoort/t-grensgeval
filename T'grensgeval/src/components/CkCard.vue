@@ -2,7 +2,7 @@
   <div class="bg-bg-100 p-12 rounded-2xl my-6">
     <div class="flex items-center gap-8">
       <div class="flex items-center gap-2 w-28">
-        <img :src="`/src/assets/icons/${icon}.svg`" alt="" class="text-primary-100 h-16 w-16" />
+        <img :src="icon" alt="" class="text-primary-100 h-16 w-16 mix-blend-darken" />
         <p v-if="times > 1">x {{ times }}</p>
       </div>
       <hr v-if="text === ''" class="border-t-primary-100 flex-grow border-t-4" />

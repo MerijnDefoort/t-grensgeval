@@ -4,13 +4,15 @@
     <!-- Your HTML template code here -->
     <ck-header />
     <div class="bg-bg-100 flex item-center flex-col justify-center">
-      <div class="px-[500px] py-24"><ck-image-grid :images="images" /></div>
-      <div class="bg-bg-200 p-24 flex flex-col justify-center items-center">
+      <div class="px-24 max-md:px-6 py-24 flex justify-center items-center">
+        <ck-image-grid :images="images" />
+      </div>
+      <div class="bg-bg-200 p-24 max-md:p-12 flex flex-col justify-center items-center">
         <h1 class="text-7xl text-center max-lg:text-3xl font-light max-lg:mb-8 mb-32">
           VOORZIENINGEN
         </h1>
-        <div class="w-2/3 mt-8">
-          <h2 class="text-4xl">GELIJK VLOERS</h2>
+        <div class="w-2/3 max-md:w-full mt-8">
+          <h2 class="text-4xl max-md:text-center">GELIJK VLOERS</h2>
           <ck-card
             :icon="icons.Cookingpot"
             :words="[
@@ -23,15 +25,15 @@
               'Koffiezet',
               'Broodrooster, mixer...',
               'Ruime eettafel',
-              'Teppanyaki (op aamvraag)'
+              'Teppanyaki (op aanvraag)'
             ]"
           />
           <ck-card :icon="icons.Livingroom" :words="['TV', 'Radio', 'Wifi', 'Sfeerhaard']" />
           <ck-card :icon="icons.Bed" :words="['2 persoonsbed 180x200', 'Dekbed 260x240']" />
           <ck-card :icon="icons.Bathtub" :words="['Douche', 'Wastafel', 'Haardroger']" />
         </div>
-        <div class="w-2/3 mt-8">
-          <h2 class="text-4xl">1ste VERDIEPING</h2>
+        <div class="w-2/3 max-md:w-full mt-8">
+          <h2 class="text-4xl max-md:text-center max-md:text-3xl">1ste VERDIEPING</h2>
           <ck-card
             :icon="icons.Bed"
             times="3"
@@ -39,8 +41,8 @@
           />
           <ck-card :icon="icons.Bathtub" :words="['Douche', 'Wastafel', 'Haardroger']" />
         </div>
-        <div class="w-2/3 mt-8">
-          <h2 class="text-4xl">ALGEMEEN</h2>
+        <div class="w-2/3 max-md:w-full mt-8">
+          <h2 class="text-4xl max-md:text-center">ALGEMEEN</h2>
           <ck-card
             :icon="icons.Home"
             :words="[

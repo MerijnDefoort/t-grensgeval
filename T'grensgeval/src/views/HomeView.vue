@@ -1,10 +1,20 @@
 <script>
 import CkMap from '@/components/CkMap.vue'
 import CkHeader from '@/components/CkHeader.vue'
+
 export default {
   components: {
     CkHeader,
     CkMap
+  },
+
+  data() {
+    return {
+      quote: null
+    }
+  },
+  mounted() {
+    console.log(this.$store?.state?.home?.quote)
   }
 }
 </script>
@@ -13,11 +23,11 @@ export default {
     <ck-header />
     <!--TODO: fix images zoals in design. maar laat bij kleine schermen zoals nu.-->
     <div class="w-100 bg-bg-100 max-lg:pb-32 pb-64 h-auto">
-      <div class="z-10 mt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center">
+      <div
+        class="z-10 h-auto mt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center"
+      >
         <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
-        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-16">
-          Sometimes the most productive thing you can do is to relax.
-        </p>
+        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-24">{{}}</p>
       </div>
       <div class="flex relative items-center max-lg:mt-12 max-sm:mt-8 mt-56 justify-center">
         <div

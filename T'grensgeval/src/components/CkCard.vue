@@ -1,14 +1,19 @@
 <template>
   <div class="bg-bg-100 p-12 rounded-2xl my-6">
-    <div class="flex items-center gap-8">
-      <div class="flex items-center gap-2 w-28">
+    <div class="flex items-center justify-center gap-8">
+      <div class="flex items-center justify-center gap-2 w-28">
         <img :src="icon" alt="" class="text-primary-100 h-16 w-16 mix-blend-darken" />
-        <p v-if="times > 1">x {{ times }}</p>
+        <p v-if="times > 1" class="w-24">x {{ times }}</p>
       </div>
-      <hr v-if="text === ''" class="border-t-primary-100 flex-grow border-t-4" />
-      <p v-if="text !== ''" class="text-2xl" v-html="addLineBreaks(text)"></p>
+      <hr v-if="text === '' && isWideScreen" class="border-t-primary-100 flex-grow border-t-4" />
+      <p v-if="text !== '' && isWideScreen" class="text-2xl" v-html="addLineBreaks(text)"></p>
     </div>
     <ck-grid class="mt-8" v-if="text === ''" :words="words" />
+    <p
+      v-if="text !== '' && !isWideScreen"
+      class="text-2xl mt-6 text-center"
+      v-html="addLineBreaks(text)"
+    ></p>
   </div>
 </template>
 
@@ -35,6 +40,11 @@ export default {
     words: {
       type: Array,
       required: true
+    }
+  },
+  computed: {
+    isWideScreen() {
+      return window.innerWidth > 500
     }
   },
   methods: {

@@ -12,9 +12,9 @@
     <MapMarker :options="{ position: center, title: `VakantieWoning 't Grensgeval ` }">
       <InfoWindow :options="{ position: center }" style="width: 100%">
         <div class="text-start flex">
-          <img src="/src/assets/images/House.jpg" class="mr-4 w-1/4" alt="" />
+          <img src="/src/assets/images/House.jpg" class="mr-4 max-md:w-1/3 w-1/4" alt="" />
           <div>
-            <h1 class="mb-1 font-bold text-xl">Vakantiewoning 'T Grensgeval</h1>
+            <h1 class="mb-1 font-bold max-md:text-sm text-xl">Vakantiewoning 'T Grensgeval</h1>
             <h3 class="font-light">Heuvellandseweg 7, 8970 Poperinge</h3>
           </div>
         </div>

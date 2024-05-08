@@ -1,7 +1,7 @@
 <template>
   <div>
     <ck-header />
-    <div class="bg-bg-100 p-24">
+    <div class="bg-bg-100 p-24 max-md:p-12">
       <div
         class="flex items-center h-100 flex-row max-lg:flex-col gap-24 max-lg:gap-12 max-lg:mt-12 max-sm:mt-8 mt-28 justify-center"
       >
@@ -30,7 +30,7 @@
       <h1 class="text-7xl text-center max-lg:text-3xl font-light max-lg:mb-8 mb-16">
         WAT KRIJG IK VOOR DEZE PRIJS?
       </h1>
-      <p class="text-3xl w-1/2 m max-lg:text-xl font-extralight text-center">
+      <p class="text-3xl w-1/2 max-md:w-full max-lg:text-xl font-extralight text-center">
         In de prijs zijn volgende dingen inbegrepen: <br />
         <b>Verbruik, Toeristentaks, Schoonmaak, Elektriciteit en WiFi</b>
         <br />

@@ -1,9 +1,14 @@
 <template>
-  <!-- Your HTML template code here -->
-
-  <div class="grid grid-cols-2 gap-4">
-    <div v-for="(text, index) in words" :key="index" class="overflow-hidden">
-      <p class="w-full text-2xl h-auto">{{ text }}</p>
+  <div class="grid max-md:grid-cols-1 grid-cols-2 gap-4">
+    <div
+      v-for="(text, index) in words"
+      :key="index"
+      :class="{ 'border-b-2 pb-2': isSmallScreen && index !== words.length - 1 }"
+    >
+      <p class="w-full text-2xl max-md:text-lg max-md:text-center font-medium">
+        <!-- Use span to style text within parentheses -->
+        <span v-html="formatText(text)"></span>
+      </p>
     </div>
   </div>
 </template>
@@ -17,21 +22,28 @@ export default {
       required: true
     }
   },
-
-  data() {
-    return {
-      // Your data properties here
+  computed: {
+    // Compute whether the screen is small
+    isSmallScreen() {
+      return window.innerWidth <= 768 // Adjust the breakpoint as needed
     }
   },
   methods: {
-    // Your methods here
-  },
-  mounted() {
-    // Code to run when the component is mounted
+    // Method to format text with parentheses
+    formatText(text) {
+      // Regular expression to find text within parentheses
+      let regex = /\([^)]+\)/g
+      // Replace text within parentheses with styled text, adding line breaks when necessary
+      if (this.isSmallScreen) {
+        return text.replace(regex, '<br/><span style="font-weight: 300;">$&</span><br/>')
+      } else {
+        return text.replace(regex, '<span style="font-weight: 300;">$&</span>')
+      }
+    }
   }
 }
 </script>
 
 <style scoped>
-/* @import '@coreui/coreui/dist/css/coreui.min.css'; */
+/* Scoped styles if needed */
 </style>

@@ -1,9 +1,7 @@
 <template>
   <div>
     <ck-header />
-    <div
-      class="z-10 pt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center bg-bg-100"
-    >
+    <div class="z-10 pt-36 flex flex-col text-center items-center justify-center bg-bg-100">
       <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
       <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-32">
         We kijken er naar uit om jullie te mogen verwelkomen! <br /><br />

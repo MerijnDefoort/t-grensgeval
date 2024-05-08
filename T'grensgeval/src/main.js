@@ -14,6 +14,8 @@ import error from '@/assets/icons/Error.svg'
 import home from '@/assets/icons/Home.svg'
 import livingroom from '@/assets/icons/Living_room.svg'
 import logo from '@/assets/icons/Logo.svg'
+import firebase from '@/plugins/firebase'
+// import store from '@/store'
 
 const icons = {
   bathtub,
@@ -30,8 +32,9 @@ export default icons
 // import VueCarousel from 'vue-carousel'
 
 const app = createApp(App)
-
 app.use(createPinia())
+// app.use(store)
+app.use(firebase)
 // app.use(VueCarousel)
 app.use(router)
 

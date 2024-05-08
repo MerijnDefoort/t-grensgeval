@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { fetchAndActivate, getRemoteConfig, getValue } from 'firebase/remote-config'
+import { useStore } from 'vuex'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
   apiKey: 'AIzaSyBGI3iUjv-lS32-F0bumtnu5EK9-ExeV4s',
   authDomain: 't-grensgeval.firebaseapp.com',
@@ -19,4 +21,25 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-const analytics = getAnalytics(app)
+
+const remoteConfig = getRemoteConfig()
+remoteConfig.settings = {
+  minimumFetchIntervalMillis: 100
+}
+const rcDefaultsFile = await fetch('remote_config_defaults.json')
+const rcDefaultsJson = await rcDefaultsFile.json()
+remoteConfig.defaultConfig = rcDefaultsJson
+
+console.log(remoteConfig.settings)
+
+fetchAndActivate(remoteConfig)
+  .then(() => {
+    // ...
+    const quote = getValue(remoteConfig, 'Quote')
+    this.$store.commit('home/setQuote', quote._value)
+  })
+  .catch((err) => {
+    // ...
+  })
+
+export default app

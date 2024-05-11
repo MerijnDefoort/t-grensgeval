@@ -26,9 +26,9 @@ const remoteConfig = getRemoteConfig()
 remoteConfig.settings = {
   minimumFetchIntervalMillis: 100
 }
-const rcDefaultsFile = await fetch('remote_config_defaults.json')
-const rcDefaultsJson = await rcDefaultsFile.json()
-remoteConfig.defaultConfig = rcDefaultsJson
+// const rcDefaultsFile = await fetch('remote_config_defaults.json')
+// const rcDefaultsJson = await rcDefaultsFile.json()
+// remoteConfig.defaultConfig = rcDefaultsJson
 
 console.log(remoteConfig.settings)
 
@@ -36,6 +36,7 @@ fetchAndActivate(remoteConfig)
   .then(() => {
     // ...
     const quote = getValue(remoteConfig, 'Quote')
+    console.log(quote._value)
     this.$store.commit('home/setQuote', quote._value)
   })
   .catch((err) => {

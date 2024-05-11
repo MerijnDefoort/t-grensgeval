@@ -120,15 +120,21 @@ export default {
 
 @media screen and (max-width: 768px) {
   .slider-image {
-    width: 100%;
+    width: 400px;
 
-    height: auto;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider-image {
+    width: 400px;
+
+    height: 600px;
   }
 }
 
 .slider-image {
-  width: 400px;
-  height: 600px;
   border-radius: 24px;
 }
 

@@ -27,31 +27,35 @@ export default {
         class="z-10 h-auto mt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center"
       >
         <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
-        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-24">{{}}</p>
+        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-24">
+          Sometimes the most productive thing you can do is to relax.
+        </p>
       </div>
-      <div class="flex relative items-center max-lg:mt-12 max-sm:mt-8 mt-56 justify-center">
-        <div
-          class="flex flex-row max-lg:flex-col justify-center items-center absolute gap-24 max-lg:gap-12"
-        >
-          <img
-            src="@/assets/images/Bedroom_1.jpg"
-            class="w-[496px] h-[700px] max-lg:w-2/3 max-lg:h-1/6 rounded-3xl z-10"
-            alt=""
-          />
-          <img
-            src="@/assets/images/Seats.jpg"
-            class="z-10 w-[496px] h-[700px] max-lg:w-2/3 max-lg:h-1/6 rounded-3xl"
-            alt=""
-          />
-          <img
-            src="@/assets/images/Washroom_1.jpg"
-            class="w-[496px] rounded-3xl h-[700px] max-lg:w-2/3 max-lg:h-1/2 z-10"
-            alt=""
-          />
+      <div class="flex items-center justify-center">
+        <div class="flex relative items-center max-lg:mt-12 max-sm:mt-8 mt-56 justify-center">
+          <div
+            class="flex flex-row max-lg:flex-col justify-center items-center absolute gap-24 max-lg:gap-12"
+          >
+            <img
+              src="@/assets/images/Bedroom_1.jpg"
+              class="w-1/4 h-auto max-lg:w-2/3 max-lg:h-1/6 rounded-3xl z-10"
+              alt=""
+            />
+            <img
+              src="@/assets/images/Seats.jpg"
+              class="z-10 w-1/4 h-auto max-lg:w-2/3 max-lg:h-1/6 rounded-3xl"
+              alt=""
+            />
+            <img
+              src="@/assets/images/Washroom_1.jpg"
+              class="w-1/4 rounded-3xl h-auto max-lg:w-2/3 max-lg:h-1/2 z-10"
+              alt=""
+            />
+          </div>
+          <div
+            class="z-0 bg-primary-100 max-lg:w-1/2 w-[85%] max-lg:h-[1000px] rounded-3xl h-96"
+          ></div>
         </div>
-        <div
-          class="z-0 bg-primary-100 max-lg:w-1/2 w-[85%] max-lg:h-[1000px] rounded-3xl h-96"
-        ></div>
       </div>
     </div>
     <div

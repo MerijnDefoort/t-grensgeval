@@ -29,17 +29,17 @@ export default {
   <div class="flex flex-col overflow-x-hidden">
     <ck-header />
     <!--TODO: fix images zoals in design. maar laat bij kleine schermen zoals nu.-->
-    <div class="w-100 bg-bg-100 max-lg:pb-32 pb-64 h-auto">
+    <div class="w-100 bg-bg-100 h-auto">
       <div
         class="z-10 h-auto mt-36 max-lg:mt-16 flex flex-col text-center items-center justify-center"
       >
         <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
-        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-24">
+        <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light">
           {{ quote }}
         </p>
       </div>
       <div class="flex items-center justify-center">
-        <div class="flex relative items-center max-lg:mt-12 max-sm:mt-8 mt-56 justify-center">
+        <div class="flex relative items-center justify-center">
           <div
             class="flex flex-row max-lg:flex-col justify-center items-center absolute gap-24 max-lg:gap-12"
           >
@@ -60,7 +60,7 @@ export default {
             />
           </div>
           <div
-            class="z-0 bg-primary-100 max-lg:w-1/2 w-[85%] max-lg:h-[1000px] rounded-3xl h-96"
+            class="z-0 bg-primary-100 max-lg:w-1/2 max-lg:m-24 m-96 w-[85%] max-lg:h-[1000px] rounded-3xl h-96"
           ></div>
         </div>
       </div>

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div
-      class="flex flex-col relative max-lg:h-[300px] h-[740px] justify-center items-center bg-bg-200"
-    >
+    <div class="flex flex-col relative p-8 justify-center items-center bg-bg-200">
       <img
         src="@/assets/icons/Favicon.png"
         class="w-1/2 max-md:w-4/5 max-xl:w-1/3 mix-blend-darken"

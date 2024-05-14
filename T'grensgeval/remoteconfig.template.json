@@ -1,1 +1,37 @@
-{}
+{
+  "parameters": {
+    "Home_text": {
+      "defaultValue": {
+        "value": "Na maanden eigenhandig verbouwen kunnen we jullie eindelijk verwelkomen in onze gloednieuwe vakantiewoning. Samen met onze ouders gingen we van breekwerken tot metselwerken, van dakwerken tot de laatste afwerkingen. Op deze manier kunnen we stellen dat we ons hart en ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek."
+      },
+      "valueType": "STRING"
+    },
+    "Home_mapTitle": {
+      "defaultValue": {
+        "value": "ONZE LIGGING"
+      },
+      "valueType": "STRING"
+    },
+    "Home_title": {
+      "defaultValue": {
+        "value": "TEAMWORK MAKES THE DREAM WORK"
+      },
+      "valueType": "STRING"
+    },
+    "Quote": {
+      "defaultValue": {
+        "value": "Sometimes the most productive thing you can do is to relax"
+      },
+      "valueType": "STRING"
+    }
+  },
+  "version": {
+    "versionNumber": "39",
+    "updateTime": "2024-05-14T21:48:38.753995Z",
+    "updateUser": {
+      "email": "merijn.defoort2@gmail.com"
+    },
+    "updateOrigin": "CONSOLE",
+    "updateType": "INCREMENTAL_UPDATE"
+  }
+}

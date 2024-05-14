@@ -25,7 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const remoteConfig = getRemoteConfig()
 remoteConfig.settings = {
-  minimumFetchIntervalMillis: 100
+  minimumFetchIntervalMillis: 600000
 }
 // const rcDefaultsFile = await fetch('remote_config_defaults.json')
 // const rcDefaultsJson = await rcDefaultsFile.json()

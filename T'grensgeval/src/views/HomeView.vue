@@ -1,6 +1,7 @@
 <script>
 import CkMap from '@/components/CkMap.vue'
 import CkHeader from '@/components/CkHeader.vue'
+import { home } from '@/store/home'
 
 export default {
   components: {
@@ -8,13 +9,19 @@ export default {
     CkMap
   },
 
-  data() {
-    return {
-      quote: null
+  computed: {
+    quote() {
+      return home.state?.quote
+    },
+    title() {
+      return home.state?.title
+    },
+    text() {
+      return home.state?.text
+    },
+    mapTitle() {
+      return home.state?.mapTitle
     }
-  },
-  mounted() {
-    console.log(this.$store?.state?.home?.quote)
   }
 }
 </script>
@@ -28,7 +35,7 @@ export default {
       >
         <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
         <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light mb-24">
-          Sometimes the most productive thing you can do is to relax.
+          {{ quote }}
         </p>
       </div>
       <div class="flex items-center justify-center">
@@ -62,14 +69,10 @@ export default {
       class="p-12 max-lg:px-0 max-lg:py-8 bg-bg-200 flex flex-col justify-center items-center text-center"
     >
       <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-8 mb-16">
-        TEAMWORK MAKES THE DREAM WORK
+        {{ title }}
       </h1>
       <p class="text-3xl max-lg:text-xl font-extralight max-lg:w-100 w-2/3">
-        Na maanden eigenhandig verbouwen kunnen we jullie eindelijk verwelkomen in onze gloednieuwe
-        vakantiewoning. Samen met onze ouders gingen we van breekwerken tot metselwerken, van
-        dakwerken tot de laatste afwerkingen. Op deze manier kunnen we stellen dat we ons hart en
-        ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de
-        toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek.
+        {{ text }}
       </p>
       <div class="flex mt-48 max-lg:mt-16 mb-12 flex-col relative justify-center items-center">
         <button
@@ -84,7 +87,7 @@ export default {
     <div
       class="p-12 px-96 max-lg:px-0 max-lg:py-6 bg-bg-100 flex flex-col justify-center items-center text-center"
     >
-      <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-4 mb-16">ONZE LIGGING</h1>
+      <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-4 mb-16">{{ mapTitle }}</h1>
       <ck-map width="100%" height="500px" class="" />
     </div>
   </div>

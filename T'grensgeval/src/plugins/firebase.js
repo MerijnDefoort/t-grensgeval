@@ -3,6 +3,8 @@
 import { initializeApp } from 'firebase/app'
 import { fetchAndActivate, getRemoteConfig, getValue } from 'firebase/remote-config'
 import { useStore } from 'vuex'
+
+import { home } from '@/store/home'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,7 +23,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-
 const remoteConfig = getRemoteConfig()
 remoteConfig.settings = {
   minimumFetchIntervalMillis: 100
@@ -35,9 +36,16 @@ console.log(remoteConfig.settings)
 fetchAndActivate(remoteConfig)
   .then(() => {
     // ...
+
     const quote = getValue(remoteConfig, 'Quote')
-    console.log(quote._value)
-    this.$store.commit('home/setQuote', quote._value)
+    const title = getValue(remoteConfig, 'Home_title')
+    const text = getValue(remoteConfig, 'Home_text')
+    const mapTitle = getValue(remoteConfig, 'Home_mapTitle')
+    console.log(quote._value, title._value)
+    home.commit('setQuote', quote._value)
+    home.commit('setHomeTitle', title._value)
+    home.commit('setHomeText', text._value)
+    home.commit('setMapTitle', mapTitle._value)
   })
   .catch((err) => {
     // ...

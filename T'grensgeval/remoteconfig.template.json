@@ -1,16 +1,10 @@
 {
   "parameters": {
-    "Home_text": {
+    "indeling_text": {
       "defaultValue": {
-        "value": "Na maanden eigenhandig verbouwen kunnen we jullie eindelijk verwelkomen in onze gloednieuwe vakantiewoning. Samen met onze ouders gingen we van breekwerken tot metselwerken, van dakwerken tot de laatste afwerkingen. Op deze manier kunnen we stellen dat we ons hart en ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek."
+        "value": "{\"hoofdTitel\":\"Voorzieningen\",\"waarschuwing\":\"Bedden goed is steeds verplicht! De huurder kan deze zelf voorzien of kunnen ter plaats gehuurd worden.\",\"gelijkvloers\":{\"titel\":\"gelijk vloers\",\"keuken\":{\"aantal\":1,\"text\":[\"Inductie kookvuur\",\"Microgolfoven\",\"Vaatwasmachine\",\"Koffiezet\",\"Ruime eettafel\",\"Grote elektrische oven\",\"Koelkast\",\"Friteuse (zonder vet)\",\"Broodrooster, mixer...\",\"Teppanyaki (op aanvraag)\"]},\"living\":{\"aantal\":1,\"text\":[\"TV\",\"WiFi\",\"Radio\",\"Sfeerhaard\"]},\"slaapkamer\":{\"aantal\":1,\"text\":[\"2 persoonsbed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\"]}},\"verdieping1\":{\"titel\":\"1ste verdieping\",\"slaapkamer\":{\"aantal\":3,\"text\":[\"2 persoonsbed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\"]}},\"algemeen\":{\"titel\":\"algemeen\",\"algemeen\":{\"aantal\":1,\"text\":[\"2 apparte toiletten\",\"BBQ\",\"Kinderstoelen\",\"Airconditioning met verwarming\",\"Kinderbedjes\",\"Parking\",\"Verversingsmat\",\"Ruime afluistbare berging\",\"Terras + tuinmeubelen\"]}}}"
       },
-      "valueType": "STRING"
-    },
-    "Home_mapTitle": {
-      "defaultValue": {
-        "value": "ONZE LIGGING"
-      },
-      "valueType": "STRING"
+      "valueType": "JSON"
     },
     "Home_title": {
       "defaultValue": {
@@ -23,11 +17,23 @@
         "value": "Sometimes the most productive thing you can do is to relax"
       },
       "valueType": "STRING"
+    },
+    "Home_text": {
+      "defaultValue": {
+        "value": "Na maanden eigenhandig verbouwen kunnen we jullie eindelijk verwelkomen in onze gloednieuwe vakantiewoning. Samen met onze ouders gingen we van breekwerken tot metselwerken, van dakwerken tot de laatste afwerkingen. Op deze manier kunnen we stellen dat we ons hart en ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek."
+      },
+      "valueType": "STRING"
+    },
+    "Home_mapTitle": {
+      "defaultValue": {
+        "value": "ONZE LIGGING"
+      },
+      "valueType": "STRING"
     }
   },
   "version": {
-    "versionNumber": "39",
-    "updateTime": "2024-05-14T21:48:38.753995Z",
+    "versionNumber": "47",
+    "updateTime": "2024-05-17T23:31:38.751994Z",
     "updateUser": {
       "email": "merijn.defoort2@gmail.com"
     },

@@ -2,7 +2,7 @@
 
 import { createStore } from 'vuex'
 
-export const home = createStore({
+export const tarieven = createStore({
   state() {
     return {
       quote: null,
@@ -13,6 +13,7 @@ export const home = createStore({
   },
   mutations: {
     setQuote(state, value) {
+      console.log(value)
       state.quote = value
     },
     setHomeTitle(state, value) {
@@ -27,4 +28,4 @@ export const home = createStore({
   }
 })
 
-export default home
+export default tarieven

@@ -9,58 +9,38 @@
       </div>
       <div class="bg-bg-200 p-24 max-md:p-12 flex flex-col justify-center items-center">
         <h1 class="text-7xl text-center max-lg:text-3xl font-light max-lg:mb-8 mb-32">
-          VOORZIENINGEN
+          {{ indeling?.hoofdTitel.toUpperCase() }}
         </h1>
         <div class="w-2/3 max-md:w-full mt-8">
-          <h2 class="text-4xl max-md:text-center">GELIJK VLOERS</h2>
-          <ck-card
-            :icon="icons.Cookingpot"
-            :words="[
-              'Inductie kookvuur',
-              'Grote elektrische oven',
-              'Microgolfoven',
-              'Koelkast',
-              'Vaatwasmachine',
-              'Friteuse (zonder vet)',
-              'Koffiezet',
-              'Broodrooster, mixer...',
-              'Ruime eettafel',
-              'Teppanyaki (op aanvraag)'
-            ]"
-          />
-          <ck-card :icon="icons.Livingroom" :words="['TV', 'Radio', 'Wifi', 'Sfeerhaard']" />
-          <ck-card :icon="icons.Bed" :words="['2 persoonsbed 180x200', 'Dekbed 260x240']" />
-          <ck-card :icon="icons.Bathtub" :words="['Douche', 'Wastafel', 'Haardroger']" />
+          <h2 class="text-4xl max-md:text-center">
+            {{ indeling?.gelijkvloers?.titel.toUpperCase() }}
+          </h2>
+          <ck-card :icon="icons.Cookingpot" :words="indeling?.gelijkvloers?.keuken?.text" />
+          <ck-card :icon="icons.Livingroom" :words="indeling?.gelijkvloers?.living?.text" />
+          <ck-card :icon="icons.Bed" :words="indeling?.gelijkvloers?.slaapkamer?.text" />
+          <ck-card :icon="icons.Bathtub" :words="indeling?.gelijkvloers?.badkamer?.text" />
         </div>
         <div class="w-2/3 max-md:w-full mt-8">
-          <h2 class="text-4xl max-md:text-center max-md:text-3xl">1ste VERDIEPING</h2>
+          <h2 class="text-4xl max-md:text-center max-md:text-3xl">
+            {{ indeling?.verdieping1?.titel.toUpperCase() }}
+          </h2>
           <ck-card
             :icon="icons.Bed"
-            times="3"
-            :words="['2 persoonsbed 180x200', 'Dekbed 260x240']"
+            :times="indeling?.verdieping1?.slaapkamer?.aantal"
+            :words="indeling?.verdieping1?.slaapkamer?.text"
           />
-          <ck-card :icon="icons.Bathtub" :words="['Douche', 'Wastafel', 'Haardroger']" />
+          <ck-card
+            :icon="icons.Bathtub"
+            :times="indeling?.verdieping1?.badkamer?.aantal"
+            :words="indeling?.verdieping1?.badkamer?.text"
+          />
         </div>
         <div class="w-2/3 max-md:w-full mt-8">
-          <h2 class="text-4xl max-md:text-center">ALGEMEEN</h2>
-          <ck-card
-            :icon="icons.Home"
-            :words="[
-              '2 apparte toiletten',
-              'BBQ',
-              'Kinderstoelen',
-              'Airconditioning met verwarming',
-              'Kinderbedjes',
-              'Parking',
-              'Verversingsmat',
-              'Ruime afluistbare berging',
-              'Terras + tuinmeubelen'
-            ]"
-          />
-          <ck-card
-            :icon="icons.Error"
-            text="Bedden goed is steeds verplicht! De huurder kan deze zelf voorzien of kunnen ter plaats gehuurd worden."
-          />
+          <h2 class="text-4xl max-md:text-center">
+            {{ indeling?.algemeen?.titel?.toUpperCase() }}
+          </h2>
+          <ck-card :icon="icons.Home" :words="indeling?.algemeen?.algemeen?.text" />
+          <ck-card :icon="icons.Error" :words="[]" :text="indeling?.waarschuwing" />
         </div>
       </div>
     </div>
@@ -96,8 +76,26 @@ export default {
     CkCard,
     CkImageGrid
   },
+
+  computed: {
+    // Your computed properties here
+    indelingData() {
+      return this.$store.state.indelingData
+    }
+  },
+
+  watch: {
+    // Your watch properties here
+    indelingData: {
+      handler() {
+        this.indeling = this.indelingData
+      },
+      deep: true
+    }
+  },
   data() {
     return {
+      indeling: null,
       images: [
         {
           url: bedroom1,

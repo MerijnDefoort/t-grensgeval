@@ -5,6 +5,7 @@ import { fetchAndActivate, getRemoteConfig, getValue } from 'firebase/remote-con
 import { useStore } from 'vuex'
 
 import { home } from '@/store/home'
+import { indeling } from '@/store/indeling'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,13 +26,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const remoteConfig = getRemoteConfig()
 remoteConfig.settings = {
-  minimumFetchIntervalMillis: 600000
+  minimumFetchIntervalMillis: 100
 }
 // const rcDefaultsFile = await fetch('remote_config_defaults.json')
 // const rcDefaultsJson = await rcDefaultsFile.json()
 // remoteConfig.defaultConfig = rcDefaultsJson
-
-console.log(remoteConfig.settings)
 
 fetchAndActivate(remoteConfig)
   .then(() => {
@@ -41,11 +40,12 @@ fetchAndActivate(remoteConfig)
     const title = getValue(remoteConfig, 'Home_title')
     const text = getValue(remoteConfig, 'Home_text')
     const mapTitle = getValue(remoteConfig, 'Home_mapTitle')
-    console.log(quote._value, title._value)
+    const indelingData = getValue(remoteConfig, 'indeling_text')
     home.commit('setQuote', quote._value)
     home.commit('setHomeTitle', title._value)
     home.commit('setHomeText', text._value)
     home.commit('setMapTitle', mapTitle._value)
+    indeling.commit('setIndelingData', indelingData._value)
   })
   .catch((err) => {
     // ...

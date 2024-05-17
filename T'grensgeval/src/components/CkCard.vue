@@ -27,7 +27,7 @@ export default {
   props: {
     icon: {
       type: String,
-      required: true
+      default: ''
     },
     text: {
       type: String,
@@ -39,7 +39,7 @@ export default {
     },
     words: {
       type: Array,
-      required: true
+      default: () => []
     }
   },
   computed: {

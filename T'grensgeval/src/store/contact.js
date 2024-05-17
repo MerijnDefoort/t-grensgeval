@@ -13,6 +13,7 @@ export const home = createStore({
   },
   mutations: {
     setQuote(state, value) {
+      console.log(value)
       state.quote = value
     },
     setHomeTitle(state, value) {

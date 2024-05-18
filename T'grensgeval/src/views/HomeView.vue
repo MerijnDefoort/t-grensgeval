@@ -1,26 +1,34 @@
 <script>
 import CkMap from '@/components/CkMap.vue'
 import CkHeader from '@/components/CkHeader.vue'
-import { home } from '@/store/home'
 
 export default {
   components: {
     CkHeader,
     CkMap
   },
-
+  data() {
+    return {
+      home: null
+    }
+  },
   computed: {
-    quote() {
-      return home.state?.quote
-    },
-    title() {
-      return home.state?.title
-    },
-    text() {
-      return home.state?.text
-    },
-    mapTitle() {
-      return home.state?.mapTitle
+    homePageData() {
+      return this.$store.state?.homePageData
+    }
+  },
+  mounted() {
+    if (this.homePageData) {
+      this.home = this.homePageData
+    }
+  },
+  watch: {
+    homePageData: {
+      handler() {
+        this.home = this.homePageData
+        console.log(this.homePageData)
+      },
+      deep: true
     }
   }
 }
@@ -35,7 +43,7 @@ export default {
       >
         <p class="text-accent font-catamaran text-8xl max-lg:text-5xl font-bold">"</p>
         <p class="text-5xl max-lg:text-2xl w-1/2 max-lg:w-3/4 font-light">
-          {{ quote }}
+          {{ home?.quote }}
         </p>
       </div>
       <div class="flex items-center justify-center">
@@ -68,11 +76,11 @@ export default {
     <div
       class="p-12 max-lg:px-0 max-lg:py-8 bg-bg-200 flex flex-col justify-center items-center text-center"
     >
-      <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-8 mb-16">
-        {{ title }}
+      <h1 class="text-7xl max-lg:text-2xl font-light max-lg:mb-8 mb-16">
+        {{ home?.titel?.toUpperCase() }}
       </h1>
       <p class="text-3xl max-lg:text-xl font-extralight max-lg:w-100 w-2/3">
-        {{ text }}
+        {{ home?.text }}
       </p>
       <div class="flex mt-48 max-lg:mt-16 mb-12 flex-col relative justify-center items-center">
         <button
@@ -87,7 +95,9 @@ export default {
     <div
       class="p-12 px-96 max-lg:px-0 max-lg:py-6 bg-bg-100 flex flex-col justify-center items-center text-center"
     >
-      <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-4 mb-16">{{ mapTitle }}</h1>
+      <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-4 mb-16">
+        {{ home?.map_titel?.toUpperCase() }}
+      </h1>
       <ck-map width="100%" height="500px" class="" />
     </div>
   </div>

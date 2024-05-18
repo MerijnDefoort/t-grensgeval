@@ -15,9 +15,6 @@
       <li class="max-md:w-20 w-[140px]">
         <router-link to="/Tarieven" class="hover:opacity-75">TARIEVEN</router-link>
       </li>
-      <!-- <li class="max-md:w-20 w-[140px]">
-        <router-link to="/Gastenboek" class="hover:opacity-75">GASTENBOEK</router-link>
-      </li> -->
       <li class="max-md:w-20 w-[140px]">
         <router-link to="/Contact" class="hover:opacity-75">CONTACT</router-link>
       </li>

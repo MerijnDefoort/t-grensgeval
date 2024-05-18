@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
-import GastenboekView from '../views/GastenboekView.vue'
 import IndelingView from '../views/IndelingView.vue'
 import TarievenView from '../views/TarievenView.vue'
 
@@ -20,11 +19,7 @@ const router = createRouter({
       name: 'contact',
       component: ContactView
     },
-    {
-      path: '/Gastenboek',
-      name: 'gastenboek',
-      component: GastenboekView
-    },
+
     {
       path: '/Indeling',
       name: 'indeling',

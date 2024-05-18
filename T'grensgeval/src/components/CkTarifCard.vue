@@ -6,25 +6,37 @@
       <p class="text-5xl max-md:text-3xl text-center text-white">{{ title }}</p>
     </div>
     <div class="p-8">
-      <div v-if="timeStamps.length === 1" class="flex flex-col justify-center items-center">
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[0].start }}</p>
+      <div v-if="timeStamps?.length === 1" class="flex flex-col justify-center items-center">
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps[0]?.start?.toUpperCase() }}
+        </p>
         <div
           class="z-10 border-gray-400 border-l-solid max-lg:h-14 max-md:h-8 h-12 w-1.5 border-l-2"
         ></div>
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[0].end }}</p>
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps[0]?.end?.toUpperCase() }}
+        </p>
       </div>
       <div class="flex flex-col justify-center items-center" v-else>
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[0].start }}</p>
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps?.[0]?.start?.toUpperCase() || '' }}
+        </p>
         <div
           class="z-10 border-gray-400 border-l-solid max-lg:h-14 max-md:h-8 h-12 w-1.5 border-l-2 max-lg:-bottom-7 -bottom-10"
         ></div>
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[0].end }}</p>
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps[0]?.end?.toUpperCase() }}
+        </p>
         <p class="text-center my-4 text-3xl max-md:text-xl font-bold text-primary-200">OF</p>
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[1].start }}</p>
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps[1]?.start?.toUpperCase() }}
+        </p>
         <div
           class="z-10 border-gray-400 border-l-solid max-lg:h-14 max-md:h-8 h-12 w-1.5 border-l-2 max-lg:-bottom-7 -bottom-10"
         ></div>
-        <p class="text-center my-4 text-3xl max-md:text-xl">{{ timeStamps[1].end }}</p>
+        <p class="text-center my-4 text-3xl max-md:text-xl">
+          {{ timeStamps[1]?.end?.toUpperCase() }}
+        </p>
       </div>
     </div>
     <div class="pb-12">
@@ -44,15 +56,18 @@ export default {
   props: {
     timeStamps: {
       type: Array,
-      required: true
+      required: true,
+      default: () => []
     },
     title: {
       type: String,
-      required: true
+      required: true,
+      default: ''
     },
     price: {
       type: String,
-      required: true
+      required: true,
+      default: ''
     }
   },
   data() {

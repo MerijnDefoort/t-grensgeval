@@ -4,8 +4,7 @@ import { initializeApp } from 'firebase/app'
 import { fetchAndActivate, getRemoteConfig, getValue } from 'firebase/remote-config'
 import { useStore } from 'vuex'
 
-import { home } from '@/store/home'
-import { indeling } from '@/store/indeling'
+import { store } from '@/store/index.js'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -36,16 +35,14 @@ fetchAndActivate(remoteConfig)
   .then(() => {
     // ...
 
-    const quote = getValue(remoteConfig, 'Quote')
-    const title = getValue(remoteConfig, 'Home_title')
-    const text = getValue(remoteConfig, 'Home_text')
-    const mapTitle = getValue(remoteConfig, 'Home_mapTitle')
-    const indelingData = getValue(remoteConfig, 'indeling_text')
-    home.commit('setQuote', quote._value)
-    home.commit('setHomeTitle', title._value)
-    home.commit('setHomeText', text._value)
-    home.commit('setMapTitle', mapTitle._value)
-    indeling.commit('setIndelingData', indelingData._value)
+    const indelingData = getValue(remoteConfig, 'indeling_page_data')
+    const homePageData = getValue(remoteConfig, 'home_page_data')
+    const contactPageData = getValue(remoteConfig, 'contact_page_data')
+    const tarievenPageData = getValue(remoteConfig, 'tarieven_page_data')
+    store.commit('setIndelingData', indelingData._value)
+    store.commit('setHomePageData', homePageData._value)
+    store.commit('setContactPageData', contactPageData._value)
+    store.commit('setTarievenPageData', tarievenPageData._value)
   })
   .catch((err) => {
     // ...

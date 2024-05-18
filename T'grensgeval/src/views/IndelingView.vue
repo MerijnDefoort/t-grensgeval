@@ -83,6 +83,9 @@ export default {
       return this.$store.state.indelingData
     }
   },
+  mounted() {
+    this.indeling = this.indelingData
+  },
 
   watch: {
     // Your watch properties here
@@ -127,9 +130,6 @@ export default {
   },
   methods: {
     // Your methods here
-  },
-  mounted() {
-    // Code to run when the component is mounted
   }
 }
 </script>

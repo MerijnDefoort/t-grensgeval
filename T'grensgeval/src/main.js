@@ -15,8 +15,7 @@ import livingroom from '@/assets/icons/Living_room.svg'
 import logo from '@/assets/icons/Logo.svg'
 // eslint-disable-next-line no-unused-vars
 import firebase from '@/plugins/firebase'
-import { home } from '@/store/home'
-import { indeling } from '@/store/indeling'
+import { store } from '@/store'
 // import store from '@/store'
 
 const icons = {
@@ -35,8 +34,7 @@ export default icons
 
 const app = createApp(App)
 // app.use(store)
-app.use(home)
-app.use(indeling)
+app.use(store)
 
 // app.use(VueCarousel)
 app.use(router)

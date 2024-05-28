@@ -2,8 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
 import { fetchAndActivate, getRemoteConfig, getValue } from 'firebase/remote-config'
-import { useStore } from 'vuex'
-
+import { getStorage } from 'firebase/storage'
 import { store } from '@/store/index.js'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +26,9 @@ const remoteConfig = getRemoteConfig()
 remoteConfig.settings = {
   minimumFetchIntervalMillis: 100
 }
+const storage = getStorage(app)
+export { storage }
+
 // const rcDefaultsFile = await fetch('remote_config_defaults.json')
 // const rcDefaultsJson = await rcDefaultsFile.json()
 // remoteConfig.defaultConfig = rcDefaultsJson

@@ -1,39 +1,33 @@
 {
   "parameters": {
-    "indeling_text": {
+    "tarieven_page_data": {
       "defaultValue": {
-        "value": "{\"hoofdTitel\":\"Voorzieningen\",\"waarschuwing\":\"Bedden goed is steeds verplicht! De huurder kan deze zelf voorzien of kunnen ter plaats gehuurd worden.\",\"gelijkvloers\":{\"titel\":\"gelijk vloers\",\"keuken\":{\"aantal\":1,\"text\":[\"Inductie kookvuur\",\"Microgolfoven\",\"Vaatwasmachine\",\"Koffiezet\",\"Ruime eettafel\",\"Grote elektrische oven\",\"Koelkast\",\"Friteuse (zonder vet)\",\"Broodrooster, mixer...\",\"Teppanyaki (op aanvraag)\"]},\"living\":{\"aantal\":1,\"text\":[\"TV\",\"WiFi\",\"Radio\",\"Sfeerhaard\"]},\"slaapkamer\":{\"aantal\":1,\"text\":[\"2 persoonsbed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\"]}},\"verdieping1\":{\"titel\":\"1ste verdieping\",\"slaapkamer\":{\"aantal\":3,\"text\":[\"2 persoonsbed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\"]}},\"algemeen\":{\"titel\":\"algemeen\",\"algemeen\":{\"aantal\":1,\"text\":[\"2 apparte toiletten\",\"BBQ\",\"Kinderstoelen\",\"Airconditioning met verwarming\",\"Kinderbedjes\",\"Parking\",\"Verversingsmat\",\"Ruime afluistbare berging\",\"Terras + tuinmeubelen\"]}}}"
+        "value": "{\"cards\":{\"week\":{\"titel\":\"Week\",\"prijs\":\"€ 640\",\"time_stamps\":[{\"start\":\"Vrijdag 16u30\",\"end\":\"Vrijdag 10u\"},{\"start\":\"Maandag 16u30\",\"end\":\"Maandag 10u\"}]},\"weekend\":{\"titel\":\"Weekend\",\"prijs\":\"€ 440\",\"time_stamps\":[{\"start\":\"Vrijdag 16u30\",\"end\":\"Maandag 10u\"}]},\"midweek\":{\"titel\":\"Midweek\",\"prijs\":\"€ 440\",\"time_stamps\":[{\"start\":\"Maandag 16u30\",\"end\":\"Vrijdag 10u\"}]}},\"titel\":\"Wat krijg ik voor deze prijs?\",\"inbegrepen\":{\"titel\":\"Inbegrepen\",\"text\":[\"Verbruik\",\"Toeristentaks\",\"Schoonmaak\",\"Elektriciteit\",\"WiFi\"]},\"niet_inbegrepen\":{\"titel\":\"Niet inbegrepen\",\"text\":[\"Bedlinnen - €7 per persoon\",\"Badlinnen - €3 per persoon\"]},\"text\":\"In de prijs zijn volgende zaken inbegrepen: <br /> Verbruik, Toeristentaks, Schoonmaak, Elektriciteit en WiFi</b><br />Wat <b>niet inbgrepen</b> is, zijn <b> bed- en badlinnen</b>, maar deze kan je huren tegen de prijs van: <br /><b>€7 voor bedlinnen en €3 voor badlinnen.</b>\"}"
       },
       "valueType": "JSON"
     },
-    "Home_title": {
+    "indeling_page_data": {
       "defaultValue": {
-        "value": "TEAMWORK MAKES THE DREAM WORK"
+        "value": "{\"hoofdTitel\":\"Voorzieningen\",\"waarschuwing\":\"Beddengoed is steeds verplicht! De huurder kan dit zelf voorzien of ter plaatse huren.\",\"gelijkvloers\":{\"titel\":\"gelijk vloers\",\"keuken\":{\"aantal\":1,\"text\":[\"Inductie kookvuur\",\"Microgolfoven\",\"Vaatwasmachine\",\"Koffiezet\",\"Ruime eettafel\",\"Grote elektrische oven\",\"Koelkast\",\"Friteuse (zonder vet)\",\"Broodrooster, mixer...\",\"Teppanyaki (op aanvraag)\"]},\"living\":{\"aantal\":1,\"text\":[\"TV\",\"WiFi\",\"Radio\",\"Sfeerhaard\"]},\"slaapkamer\":{\"aantal\":1,\"text\":[\"1 slaapkamer met dubbel bed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\",\"Afzonderlijk toilet\"]}},\"verdieping1\":{\"titel\":\"1ste verdieping\",\"slaapkamer\":{\"aantal\":1,\"text\":[\"3 slaapkamers met dubbel bed 180x200\",\"Dekbed 260x240\"]},\"badkamer\":{\"aantal\":1,\"text\":[\"Douche\",\"Haardroger\",\"Wastafel\",\"Afzonderlijk toilet\"]}},\"algemeen\":{\"titel\":\"algemeen\",\"algemeen\":{\"aantal\":1,\"text\":[\"BBQ\",\"Kinderstoelen\",\"Airconditioning met verwarming\",\"Kinderbedjes\",\"Parking\",\"Verversingsmat\",\"Ruime afsluitbare berging\",\"Terras + tuinmeubelen\"]}}}"
       },
-      "valueType": "STRING"
+      "valueType": "JSON"
     },
-    "Quote": {
+    "contact_page_data": {
       "defaultValue": {
-        "value": "Sometimes the most productive thing you can do is to relax"
+        "value": "{\"quote\":{\"0\":\"We kijken er naar uit om jullie te mogen verwelkomen!\",\"1\":\"Louis & Justien\"},\"titel\":\"Contact gegevens\",\"email_titel\":\"Email\",\"email_text\":\"tgrensgeval@hotmail.com\",\"telefoon_titel\":\"Telefoon\",\"telefoon_text\":\"+32 499/74 98 09\",\"adres_titel\":\"Adres\",\"adres_text\":{\"straat\":\"Heuvellandseweg 7\",\"plaats\":\"8970 RENINGELST\"}}"
       },
-      "valueType": "STRING"
+      "valueType": "JSON"
     },
-    "Home_text": {
+    "home_page_data": {
       "defaultValue": {
-        "value": "Na maanden eigenhandig verbouwen kunnen we jullie eindelijk verwelkomen in onze gloednieuwe vakantiewoning. Samen met onze ouders gingen we van breekwerken tot metselwerken, van dakwerken tot de laatste afwerkingen. Op deze manier kunnen we stellen dat we ons hart en ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek."
+        "value": "{\"quote\":\"Sometimes the most productive thing you can do is to relax.\",\"text\":\"Na maanden eigenhandig verbouwen, kunnen we jullie eindelijk verwelkomen in onze gloednieuwe vakantiewoning. Samen met onze ouders gingen we van breek- tot dakwerken, van schilderen tot de laatste schoonmaakbeurt. Op deze manier kunnen we stellen dat we ons hart en ziel gelegd hebben in deze vakantiewoning. We blijven met positieve blik kijken naar de toekomst en hopen jullie te kunnen bekoren met ons verblijf en de streek.\",\"map_titel\":\"Onze ligging\",\"titel\":\"Teamwork makes the dream work\"}"
       },
-      "valueType": "STRING"
-    },
-    "Home_mapTitle": {
-      "defaultValue": {
-        "value": "ONZE LIGGING"
-      },
-      "valueType": "STRING"
+      "valueType": "JSON"
     }
   },
   "version": {
-    "versionNumber": "47",
-    "updateTime": "2024-05-17T23:31:38.751994Z",
+    "versionNumber": "67",
+    "updateTime": "2024-05-27T11:48:14.230865Z",
     "updateUser": {
       "email": "merijn.defoort2@gmail.com"
     },

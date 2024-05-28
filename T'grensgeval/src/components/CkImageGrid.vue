@@ -32,7 +32,7 @@
       <button
         @click="nextSlide"
         class="slider-button next"
-        :class="{ hidden: currentIndex + visibleImagesCount >= images.length }"
+        :class="{ hidden: currentIndex + visibleImagesCount >= images?.length }"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -65,12 +65,12 @@ export default {
   },
   computed: {
     visibleImages() {
-      return this.images.slice(this.currentIndex, this.currentIndex + this.visibleImagesCount)
+      return this.images?.slice(this.currentIndex, this.currentIndex + this.visibleImagesCount)
     }
   },
   methods: {
     nextSlide() {
-      if (this.currentIndex + this.visibleImagesCount < this.images.length) {
+      if (this.currentIndex + this.visibleImagesCount < this.images?.length) {
         this.currentIndex++
       }
     },
@@ -91,6 +91,7 @@ export default {
   mounted() {
     this.updateVisibleImagesCount()
     window.addEventListener('resize', this.updateVisibleImagesCount)
+    console.log(this.images)
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.updateVisibleImagesCount)
@@ -122,7 +123,7 @@ export default {
   .slider-image {
     width: 400px;
 
-    height: 500px;
+    height: 533.333333px;
   }
 }
 
@@ -130,7 +131,7 @@ export default {
   .slider-image {
     width: 400px;
 
-    height: 600px;
+    height: 533.333333px;
   }
 }
 

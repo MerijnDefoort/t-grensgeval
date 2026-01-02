@@ -1,63 +1,32 @@
+<script setup>
+import { ref } from 'vue'
+import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
+
+const mapCenter = ref([2.75154, 50.810026]) // Set the center to the specified position
+</script>
+
 <template>
-  <GoogleMap
-    :api-key="apiKey"
-    :style="({ width: mapWidth }, { height: mapHeight })"
-    :center="center"
-    :zoom="15"
-    :options="mapOptions"
-    :controlSize="30"
-    :fullscreenControl="false"
-    :mapTypeControl="false"
+  <MapboxMap
+    style="height: 400px; width: 70%"
+    access-token="pk.eyJ1IjoibWVyaWpuLWQiLCJhIjoiY2x1bnZoZmo4MXFxNzJrbG12Y29nMm9ueSJ9.9lynwNifeana3_i1vxaPVw"
+    map-style="mapbox://styles/mapbox/streets-v11"
+    :center="mapCenter"
+    :zoom="12"
+    @load="onMapLoad"
   >
-    <MapMarker :options="{ position: center, title: `VakantieWoning 't Grensgeval ` }">
-      <InfoWindow :options="{ position: center }" style="width: 100%">
-        <div class="text-start flex">
-          <img src="/src/assets/images/House.jpg" class="mr-4 max-md:w-1/3 w-1/4" alt="" />
+    <MapboxMarker :lng-lat="[2.75154, 50.810026]">
+      <template #popup>
+        <div class="text-start flex mt-5 w-48">
           <div>
             <h1 class="mb-1 font-bold max-md:text-sm text-xl">Vakantiewoning 'T Grensgeval</h1>
             <h3 class="font-light">Heuvellandseweg 7, 8970 Poperinge</h3>
           </div>
         </div>
-      </InfoWindow>
-    </MapMarker>
-  </GoogleMap>
+      </template>
+    </MapboxMarker>
+  </MapboxMap>
 </template>
 
-<script>
-import { GoogleMap, Marker as MapMarker, InfoWindow } from 'vue3-google-map'
-
-export default {
-  components: {
-    GoogleMap,
-    MapMarker,
-    InfoWindow
-  },
-  props: {
-    height: {
-      type: String
-    },
-    width: {
-      type: String
-    }
-  },
-
-  data() {
-    return {
-      mapHeight: this.height,
-
-      center: { lat: 50.810026, lng: 2.75154 },
-      apiKey: import.meta.env.VITE_GOOGLEMAPS_ACCESS_TOKEN,
-      mapOptions: {
-        mapTypeId: 'roadmap' // Setting map type to 'roadmap' to remove satellite option
-      }
-    }
-  },
-  methods: {
-    // Add your methods here
-  }
-}
-</script>
-
 <style scoped>
-/* Add your component-specific styles here */
+/* On small screens (mobile) increase width to 70% */
 </style>

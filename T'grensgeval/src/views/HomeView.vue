@@ -144,7 +144,8 @@ export default {
       <h1 class="text-7xl max-lg:text-3xl font-light max-lg:mb-4 mb-16">
         {{ home?.map_titel?.toUpperCase() }}
       </h1>
-      <ck-map width="100%" height="500px" class="" />
+      
+      <ck-map />
       <div
         v-if="streekImages?.value?.length > 0"
         class="px-24 max-md:px-6 py-24 flex justify-center items-center"
